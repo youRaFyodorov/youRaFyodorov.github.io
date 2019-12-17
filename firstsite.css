@@ -84,22 +84,43 @@ nav {
     text-align: center;
 }
 .container{
-    margin: 10px;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline; 
+    width: 100%; /* ширина блока-контейнера */
+    max-width: 960px; /* максимальная ширина контейнера */
+    margin: 0 auto; /* этот стиль центрирует контейнер */
 }
-.photo{
-    border: 2px solid #55c5e9; /* Рамка вокруг фотографии */
-    padding: 15px; /* Расстояние от картинки до рамки */
-    background: #666; /* Цвет фона */
-    margin-right: 10px; /* Отступ справа */
-    margin-bottom: 10px; /* Отступ снизу */
+ .photo {
+    float: left; /* говорим элементам выстраиваться один за другим */
+    width: 33.333333%; /* устанавливаем ширину элемента */
+    padding: 10px; /* добавляем отступы с каждой стороны */
+    box-sizing: border-box; /* меняем способ вычисления ширины */
+ }
+ .photo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 10px solid #eee;
+    box-sizing: border-box;
 }
-
-
+.photo a:hover {
+    opacity: 0.5;
+}
+.photo a {
+    display: block;
+    position: relative;
+}
+.photo a:after {
+    content: '';
+    background: transparent url(../img/icons/eye-icon.png) no-repeat center;
+    width: 52px;
+    height: 35px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+}
 
 /* css for contacts  */  
 .titleC{
@@ -117,6 +138,10 @@ nav {
     text-align: left;
     font-size: 20px;
     padding: 15px 20px;
+    font-family: 'Girassol', cursive;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Lilita One', cursive;
+    
 }
 .infa a{
     color: yellow;
